@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Bangers&family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Fjalla+One&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Pangolin&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sigmar&family=Teko:wght@300..700&family=Ysabeau+SC:wght@800&display=swap');
+
+@layer base {
+    .nav-items{
+        @apply hover:bg-white/10 hover:text-white transition-all duration-300 px-4 py-1.5 rounded-full text-white/70 text-sm font-semibold
+    }
+    .hero-ring{
+        @apply inset-0 absolute border-2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5 top-1/2
+    }
+}
+html, body{
+    font-family: "Outfit", sans-serif;
+}
+@layer utilities {
+    .container {
+        @apply lg:max-w-5xl
+    }
+}
