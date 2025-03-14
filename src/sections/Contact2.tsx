@@ -1,33 +1,28 @@
 'use client'
-import React, { useState, useRef, FormEvent, ChangeEvent } from 'react'
+import React from 'react'
+import {useState, useRef} from 'react'
 import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser'
 
-interface FormData {
-  name: string;
-  email: string; 
-  message: string;
-}
-
-const Contact2: React.FC = () => {
+const Contact = () => {
   const formRef = useRef<HTMLFormElement>(null)
-  const [form, setForm] = useState<FormData>({
+  const [form, setForm] = useState({
     name: '',
-    email: '',
+    email: '', 
     message: '',
   })
-  const [loading, setLoading] = useState<boolean>(false)
+  const [loading, setLoading] = useState(false)
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setForm({ ...form, [name]: value })
   }
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setLoading(true)
     emailjs.send(
-      'service_ovkq5or',
+      'service_c9e1cnl',
       'template_0p6qexj',
       {
         from_name: form.name,
@@ -35,7 +30,7 @@ const Contact2: React.FC = () => {
         from_email: form.email,
         to_email: 'yourzlove56@gmail.com',
         message: form.message,
-      },  
+      },
       'qc18ktF-HDbAcROh-'
     ).then(() => {
       setLoading(false)
@@ -53,58 +48,66 @@ const Contact2: React.FC = () => {
   }
 
   return (
-    <div className='xl:mt-0 md:mt-8 mt-12 flex flex-col md:flex-row gap-10 items-center justify-center px-6 sm:px-12 lg:px-20'>
-      <div className='flex-[0.75] bg-gray-900 p-8 rounded-2xl w-full max-w-2xl shadow-lg'>
-        <h3 className='text-3xl font-bold text-transparent bg-gradient-to-r from-emerald-300 to-sky-500 bg-clip-text'>Contact Me</h3>
-        <p className='text-gray-400 mt-2'>Feel free to reach out for collaborations or just a friendly hello! 👋</p>
+    <div className='min-h-screen flex items-center justify-center bg-gradient-to-br from-emerald-300 to-sky-300 py-12 px-4 sm:px-6 lg:px-8'>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className='max-w-md w-full space-y-8 bg-gray-800 p-10 rounded-xl shadow-2xl'
+      >
+        <div className="text-center">
+          <p className="text-lg text-emerald-300 font-semibold">Get in touch</p>
+          <h3 className="mt-2 text-3xl font-bold text-white">Contact.</h3>
+        </div>
+
         <form
           ref={formRef}
           onSubmit={handleSubmit}
-          className='mt-6 flex flex-col gap-6'
+          className='mt-8 space-y-6'
         >
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-2'>Your Name</span>
+          <label className='block'>
+            <span className='text-gray-300 text-sm font-semibold mb-2 block'>Your Name</span>
             <input
               type='text'
               name='name'
               value={form.name}
               onChange={handleChange}
-              placeholder='John Doe'
-              className='bg-gray-800 py-3 px-4 text-white rounded-lg outline-none border border-gray-700 focus:border-emerald-400 transition'
+              placeholder="What's your name?"
+              className='w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-emerald-300 transition duration-200'
             />
           </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-2'>Your Email</span>
+          <label className='block'>
+            <span className='text-gray-300 text-sm font-semibold mb-2 block'>Your email</span>
             <input
               type='email'
               name='email'
               value={form.email}
               onChange={handleChange}
-              placeholder='johndoe@example.com'
-              className='bg-gray-800 py-3 px-4 text-white rounded-lg outline-none border border-gray-700 focus:border-emerald-400 transition'
+              placeholder="What's your email?"
+              className='w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-emerald-300 transition duration-200'
             />
           </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-2'>Your Message</span>
+          <label className='block'>
+            <span className='text-gray-300 text-sm font-semibold mb-2 block'>Your Message</span>
             <textarea
-              rows={6}
+              rows={7}
               name='message'
               value={form.message}
               onChange={handleChange}
-              placeholder='What do you want to say?'
-              className='bg-gray-800 py-3 px-4 text-white rounded-lg outline-none border border-gray-700 focus:border-emerald-400 transition resize-none'
+              placeholder='What you want to say?'
+              className='w-full px-4 py-3 rounded-lg bg-gray-700 border border-gray-600 text-white placeholder-gray-400 focus:outline-none focus:border-emerald-300 transition duration-200'
             />
           </label>
           <button
             type='submit'
-            className='bg-emerald-500 hover:bg-emerald-600 transition py-3 px-6 w-full sm:w-fit text-white font-bold shadow-lg rounded-xl flex justify-center items-center'
+            className='w-full flex justify-center py-3 px-4 border border-transparent rounded-lg shadow-sm text-sm font-medium text-white bg-gradient-to-r from-emerald-300 to-sky-300 hover:from-emerald-400 hover:to-sky-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-300 transition duration-200'
           >
             {loading ? "Sending..." : "Send Message"}
           </button>
         </form>
-      </div>
+      </motion.div>
     </div>
   )
 }
 
-export default Contact2;
+export default Contact
