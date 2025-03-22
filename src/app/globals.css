@@ -33,3 +33,16 @@ html, body{
     font-style: normal;
   }
   
+  @media screen and (max-width: 360px) {
+    .custom-responsive {
+      top: 76% !important;  /* Adjust vertical position */
+      width: 100% !important; /* Ensure it fits the screen */
+    }
+    .textclass{
+        font-size: 6.5rem !important; /* Adjust font size */
+    }
+    .textclass2{
+        font-size: 1.5rem !important; /* Adjust font size */
+    }
+  }
+  

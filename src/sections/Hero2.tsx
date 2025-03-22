@@ -17,20 +17,20 @@ const Hero2 = () => {
           transition={{ repeat: Infinity, ease: "linear", duration: 8 }}
         >
           <span className="flex">
-            <h1 className="text-black text-[15vw] font2 sm:text-[19vw] md:text-[28vw] lg:text-[15vw] font-bold mx-5">DEVELOPER</h1>
-            <h1 className="text-black text-[15vw] font2 sm:text-[19vw] md:text-[28vw] lg:text-[15vw] font-bold mx-5">&</h1>
-            <h1 className="text-black text-[15vw] font2 sm:text-[19vw] md:text-[28vw] lg:text-[15vw] font-bold mx-5">MODELER</h1>
+            <h1 className="text-black textclass text-[15vw] font2 sm:text-[19vw] md:text-[28vw] lg:text-[15vw] font-bold mx-5">DEVELOPER</h1>
+            <h1 className="text-black textclass text-[15vw] font2 sm:text-[19vw] md:text-[28vw] lg:text-[15vw] font-bold mx-5">&</h1>
+            <h1 className="text-black textclass text-[15vw] font2 sm:text-[19vw] md:text-[28vw] lg:text-[15vw] font-bold mx-5">MODELER</h1>
           </span>
           <span className="flex">
-            <h1 className="text-black text-[15vw] font2 sm:text-[19vw] md:text-[28vw] lg:text-[15vw] font-bold mx-5">DEVELOPER</h1>
-            <h1 className="text-black text-[15vw] font2 sm:text-[19vw] md:text-[28vw] lg:text-[15vw] font-bold mx-5">&</h1>
-            <h1 className="text-black text-[15vw] font2 sm:text-[19vw] md:text-[28vw] lg:text-[15vw] font-bold mx-5">MODELER</h1>
+            <h1 className="text-black textclass text-[15vw] font2 sm:text-[19vw] md:text-[28vw] lg:text-[15vw] font-bold mx-5">DEVELOPER</h1>
+            <h1 className="text-black textclass text-[15vw] font2 sm:text-[19vw] md:text-[28vw] lg:text-[15vw] font-bold mx-5">&</h1>
+            <h1 className="text-black textclass text-[15vw] font2 sm:text-[19vw] md:text-[28vw] lg:text-[15vw] font-bold mx-5">MODELER</h1>
           </span>
         </motion.div>
       </div>
 
       {/* Foreground Image */}
-      <div className="absolute top-[53%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] sm:top-[70%] sm:w-[100%] md:w-[80%] md:top-[75%] lg:w-[100vw] lg:top-[60%] flex justify-center h-auto z-10">
+      <div className="absolute top-[53%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[60%] sm:top-[70%] sm:w-[100%] md:w-[80%] md:top-[75%] lg:w-[100vw] lg:top-[60%] flex justify-center h-auto z-10 custom-responsive">
         <Image 
           src={heroImage2} 
           alt="Hero Image" 

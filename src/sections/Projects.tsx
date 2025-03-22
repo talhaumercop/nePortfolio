@@ -57,7 +57,7 @@ export const ProjectsSection = () => {
           {portfolioProjects.map((project, index) => (
             <Card
               key={project.title}
-              className="px-8 pt-8 text-white"
+              className="px-8 sticky top-0  pt-8 text-white"
             >
               <div className="flex">
                 <div className="inline-flex gap-2 text-transparent bg-clip-text text-sm font-bold tracking-widest uppercase bg-gradient-to-r from-emerald-300 to-sky-400">

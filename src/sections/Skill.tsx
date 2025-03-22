@@ -7,18 +7,18 @@ const skills = [
   {
     title: 'Frontend Development',
     description: 'Building beautiful, responsive, and high-performance websites using React, Next.js, Tailwind CSS, and GSAP animations.',
-    color: 'bg-blue-400'
+    color: 'bg-black'
   },
   {
     title: '3D Blender Modeling',
     description: 'Creating basic 3D models, UV unwrapping, baking shadows, and integrating them into web applications with Three.js.',
-    color: 'bg-green-500'
+    color: 'bg-black'
   },
   {
     title: 'Building AI Agents',
     description: 'Exploring AI-powered applications and agents with a focus on interactivity and automation.',
     banner: 'Work in Progress',
-    color: 'bg-purple-500'
+    color: 'bg-black'
   }
 ];
 
