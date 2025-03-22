@@ -42,12 +42,12 @@ export const ProjectsSection = () => {
   return (
     <section className="pb-16 z-[999]">
       <div className="container">
-        <h2 className="text-center text-3xl uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-500 bg-clip-text text-transparent">
+        <h2 className="text-center text-5xl uppercase font-semibold text-white">
           Featured Projects
         </h2>
-        <p className="text-center">
+        <p className="text-center text-white/60">
           These projects may not be{" "}
-          <span className="uppercase text-lg bg-gradient-to-r from-emerald-500 to-sky-100 bg-clip-text text-transparent">
+          <span className="uppercase text-lg bg-gradient-to-r from-red-500 to-sky-500 bg-clip-text text-transparent">
             responsive
           </span>{" "}
           as they are my personal projects.
@@ -57,8 +57,7 @@ export const ProjectsSection = () => {
           {portfolioProjects.map((project, index) => (
             <Card
               key={project.title}
-              className="sticky px-8 pt-8"
-              style={{ top: `calc(64px + ${index * 40}px)` }}
+              className="px-8 pt-8 text-white"
             >
               <div className="flex">
                 <div className="inline-flex gap-2 text-transparent bg-clip-text text-sm font-bold tracking-widest uppercase bg-gradient-to-r from-emerald-300 to-sky-400">

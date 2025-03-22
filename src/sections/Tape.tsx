@@ -20,15 +20,16 @@ export const TapeSection = () => {
 
   return (
     <div className="py-16">
-      <div className="-rotate-3 -mx-1 bg-gradient-to-r from-emerald-300 to-sky-400 overflow-hidden">
+      <div className=" -mx-1 bg-gradient-to-r from-black-800 to-white-900 overflow-hidden">
         <div className="relative flex whitespace-nowrap animate-scroll">
-          <div className="flex gap-4 py-3">
+          <div className="flex gap-4 py-3  border-white/20 border-[1px] ">
             {words.map((word, index) => (
               <div key={index} className="inline-flex gap-4 items-center">
-                <span className="word-tile text-gray-900 uppercase font-extrabold text-sm">
+                <span className="word-tile text-white uppercase font-extrabold text-8xl">
                   {word}
                 </span>
-                <StarIcon className="size-6 text-gray-900" />
+                {/* <StarIcon className="size-6 text-white" /> */}
+                <span className='text-7xl'>🔥</span>
               </div>
             ))}
           </div>
@@ -36,7 +37,7 @@ export const TapeSection = () => {
           <div className="flex gap-4 py-3" aria-hidden="true">
             {words.map((word, index) => (
               <div key={index} className="inline-flex gap-4 items-center">
-                <span className="word-tile text-gray-900 uppercase font-extrabold text-sm">
+                <span className="word-tile text-gray-900 uppercase font-extrabold text-3xl">
                   {word}
                 </span>
                 <StarIcon className="size-6 text-gray-900" />

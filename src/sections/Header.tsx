@@ -6,44 +6,14 @@ export const Header = () => {
   const [activeItem, setActiveItem] = useState("home");
 
   return (
-    <div className="flex justify-center z-10 w-full fixed top-3 items-center">
-      <nav className="flex gap-1 p-0.5 border bg-white/10 backdrop-blur border-white/15 rounded-full">
-        <a 
-          href="#home" 
-          onClick={() => setActiveItem("home")}
-          className={`nav-items transition-colors duration-300 ${
-            activeItem === "home" ? "bg-white text-gray-900" : ""
-          }`}
-        >
-          Home
-        </a>
-        <a 
-          href="#projects"
-          onClick={() => setActiveItem("projects")} 
-          className={`nav-items transition-colors duration-300 ${
-            activeItem === "projects" ? "bg-white text-gray-900" : ""
-          }`}
-        >
-          Projects
-        </a>
-        <a 
-          href="#about"
-          onClick={() => setActiveItem("about")}
-          className={`nav-items transition-colors duration-300 ${
-            activeItem === "about" ? "bg-white text-gray-900" : ""
-          }`}
-        >
-          About
-        </a>
-        <a 
-          href="#contact"
-          onClick={() => setActiveItem("contact")}
-          className={`nav-items transition-colors duration-300 ${
-            activeItem === "contact" ? "bg-white text-gray-900" : ""
-          }`}
-        >
-          Contact
-        </a>
+    <div className="flex justify-center z-10 w-full absolute top-3 items-center">
+      <nav className="flex justify-between items-center p-0.5 w-[95%] rounded border bg-black/15 backdrop-blur border-black/10">
+        <p className="text-black text-center p-2 text-sm">
+      DEVELOPER OF THE FUTURE
+  </p>      
+  <p className="text-black text-center p-2 text-sm">
+      TALHA UMAR
+  </p>   
       </nav>
     </div>
   );

@@ -1,7 +1,7 @@
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 export const Footer = () => {
   return (
-    <footer className="bg-gradient-to-t from-emerald-400/20">
+    <footer className="bg-gradient-to-t from-white-400/20">
       <div className="container">
         <div className="border-t border-white/10 py-6 flex flex-col items-center text-sm">
           <div className="text-gray-400">&copy; {new Date().getFullYear()}.All rights reserved.</div>

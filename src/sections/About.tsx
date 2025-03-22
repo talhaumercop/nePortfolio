@@ -57,42 +57,48 @@ const hobbies = [
     title: "Gaming",
     emoji: "🎮",
     top: "5%",
-    left: "5%"
+    left: "5%",
+    gradient: "from-purple-400 to-pink-300"
   },
   {
     title: "Cricket", 
     emoji: "🏏",
     top: "5%",
-    left: "50%"
+    left: "50%",
+    gradient: "from-blue-400 to-cyan-300"
   },
   {
     title: "Photography",
     emoji: "📸",
     top: "35%",
-    left: "40%"
+    left: "40%",
+    gradient: "from-teal-400 to-emerald-300"
   },
   {
     title: "Sketching",
     emoji: "✏️",
     top: "30%",
-    left: "5%"
+    left: "5%",
+    gradient: "from-amber-300 to-yellow-200"
   },
   {
     title: "Fashion",
     emoji: "👔",
     top: "70%",
-    left: "45%"
+    left: "45%",
+    gradient: "from-rose-400 to-pink-300"
   },
   {
     title: "Music",
     emoji: "🎵",
     top: "65%",
-    left: "5%"
+    left: "5%",
+    gradient: "from-indigo-400 to-violet-300"
   }
 ];
 export const AboutSection = () => {
   return (
-  <div className="py-20">
+  <div className="py-20 text-white">
     <div className="container">
     <SectionHeader description="Learn More About Me" title="A Glimpse Into My World" />
     <div className="mt-20 flex flex-col gap-8">
@@ -131,9 +137,9 @@ export const AboutSection = () => {
         key={index}
         style={{ top: hobby.top, left: hobby.left }}
         drag
-        dragConstraints={{ top: -100, left: -100, right: 100, bottom: 100 }} // Restrict movement
-        whileDrag={{ scale: 1.1 }} // Slight scale effect when dragging
-        className="absolute inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 cursor-grab active:cursor-grabbing"
+        dragConstraints={{ top: -100, left: -100, right: 100, bottom: 100 }}
+        whileDrag={{ scale: 1.1 }}
+        className={`absolute inline-flex items-center gap-2 px-6 bg-gradient-to-r ${hobby.gradient} rounded-full py-1.5 cursor-grab active:cursor-grabbing`}
       >
         <span className="font-medium text-gray-900">{hobby.title}</span>
         <span>{hobby.emoji}</span>
@@ -144,7 +150,7 @@ export const AboutSection = () => {
       <Card className="h-[320px] col-span-2 p-0 relative">
         <Image src={mapImage} alt="map" className=" w-full h-full object-cover"/>
          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-         <Image src={smileEmoji} className="size-20 size-20 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full" alt="smiles" />
+         <Image src={smileEmoji} className="size-20 bg-gradient-to-r from-sky-400 to-violet-300 rounded-full" alt="smiles" />
          </div>
       </Card>
       </div>

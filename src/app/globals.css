@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Archivo+Black&family=Bangers&family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Fjalla+One&family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Outfit:wght@100..900&family=Pangolin&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sigmar&family=Teko:wght@300..700&family=Ysabeau+SC:wght@800&display=swap');
 
 @layer base {
@@ -12,10 +13,23 @@
     }
 }
 html, body{
+    background: #000;
     font-family: "Outfit", sans-serif;
+    overflow-x: hidden;
 }
 @layer utilities {
     .container {
         @apply lg:max-w-5xl
     }
 }
+
+/* The .bg font is not working because you have two conflicting .bg class definitions.
+   The background: #000 rule is overriding the font rules since it comes first.
+   Combine them into a single rule: */
+
+.font2 {
+    font-family:fantasy;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
